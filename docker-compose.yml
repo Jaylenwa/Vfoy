@@ -10,11 +10,9 @@ services:
       - redis_data:/bitnami/redis/data
 
   vfoy:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "5212:5212"
+    container_name: vfoy
+    image: jaylenwa/vfoy:1.0
+    restart: unless-stopped
     volumes:
       - temp_data:/data
       - ./vfoy/uploads:/vfoy/uploads
@@ -23,6 +21,15 @@ services:
       - ./vfoy/avatar:/vfoy/avatar
     depends_on:
       - aria2
+
+  vfoy-frontend:
+    container_name: vfoy-frontend
+    image: jaylenwa/vfoy-frontend:1.0
+    restart: unless-stopped
+    depends_on:
+      - vfoy
+    ports:
+      - "80:80"
 
   aria2:
     container_name: aria2

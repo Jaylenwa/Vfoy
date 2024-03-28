@@ -98,12 +98,12 @@ func Init(path string, statics fs.FS) {
 				crontab.Init()
 			},
 		},
-		{
-			"master",
-			func() {
-				InitStatic(statics)
-			},
-		},
+		// {
+		// 	"master",
+		// 	func() {
+		// 		InitStatic(statics)
+		// 	},
+		// },
 		{
 			"slave",
 			func() {
