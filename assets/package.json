@@ -1,6 +1,6 @@
 {
   "name": "vfoy-frontend",
-  "version": "3.8.3",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "@babel/core": "7.6.0",

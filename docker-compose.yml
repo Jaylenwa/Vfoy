@@ -7,6 +7,14 @@ services:
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
 
+  aria2:
+    container_name: aria2
+    image: p3terx/aria2-pro # third party image, please keep notice what you are doing
+    restart: unless-stopped
+    environment:
+      - RPC_SECRET=your_aria_rpc_token # aria rpc token, customize your own
+      - RPC_PORT=6800
+      
   vfoy:
     container_name: vfoy
     image: jaylenwa/vfoy:1.0
@@ -17,6 +25,7 @@ services:
       - ./vfoy/avatar:/vfoy/avatar
     depends_on:
       - aria2
+      - redis
 
   vfoy-frontend:
     container_name: vfoy-frontend
@@ -26,11 +35,3 @@ services:
       - vfoy
     ports:
       - "80:80"
-
-  aria2:
-    container_name: aria2
-    image: p3terx/aria2-pro # third party image, please keep notice what you are doing
-    restart: unless-stopped
-    environment:
-      - RPC_SECRET=your_aria_rpc_token # aria rpc token, customize your own
-      - RPC_PORT=6800
