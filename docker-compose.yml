@@ -6,18 +6,14 @@ services:
     restart: unless-stopped
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
-    volumes:
-      - redis_data:/bitnami/redis/data
 
   vfoy:
     container_name: vfoy
     image: jaylenwa/vfoy:1.0
     restart: unless-stopped
     volumes:
-      - temp_data:/data
+      - ./vfoy/data:/data
       - ./vfoy/uploads:/vfoy/uploads
-      - ./vfoy/conf.ini:/vfoy/conf.ini
-      - ./vfoy/vfoy.db:/vfoy/vfoy.db
       - ./vfoy/avatar:/vfoy/avatar
     depends_on:
       - aria2
@@ -38,15 +34,3 @@ services:
     environment:
       - RPC_SECRET=your_aria_rpc_token # aria rpc token, customize your own
       - RPC_PORT=6800
-    volumes:
-      - ./aria2/config:/config
-      - temp_data:/data
-volumes:
-  redis_data:
-    driver: local
-  temp_data:
-    driver: local
-    driver_opts:
-      type: none
-      device: $PWD/data
-      o: bind
