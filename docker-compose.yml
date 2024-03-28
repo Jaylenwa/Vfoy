@@ -10,9 +10,9 @@ services:
       - redis_data:/bitnami/redis/data
 
   vfoy:
-    container_name: vfoy
-    image: vfoy/vfoy:latest
-    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "5212:5212"
     volumes:
