@@ -12,9 +12,9 @@ import (
 	"strconv"
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
 )
 
 // slashClean is equivalent to but slightly more efficient than

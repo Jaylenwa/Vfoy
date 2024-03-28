@@ -8,7 +8,7 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/jinzhu/gorm"
 	"github.com/pkg/errors"
 )

@@ -1,7 +1,7 @@
 package conf
 
 import (
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/go-ini/ini"
 	"github.com/go-playground/validator/v10"
 )

@@ -15,8 +15,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
 )
 
 // GetPublicKey 从回调请求或缓存中获取OSS的回调签名公钥

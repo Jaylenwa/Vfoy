@@ -4,7 +4,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
 	"github.com/jinzhu/gorm"
 )
 

@@ -7,7 +7,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 )

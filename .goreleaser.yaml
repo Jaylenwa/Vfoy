@@ -12,7 +12,7 @@ builds:
     binary: vfoy
 
     ldflags:
-      - -X 'github.com/Jaylenwa/Vfoy/v3/pkg/conf.BackendVersion={{.Tag}}' -X 'github.com/Jaylenwa/Vfoy/v3/pkg/conf.LastCommit={{.ShortCommit}}'
+      - -X 'github.com/Jaylenwa/Vfoy/pkg/conf.BackendVersion={{.Tag}}' -X 'github.com/Jaylenwa/Vfoy/pkg/conf.LastCommit={{.ShortCommit}}'
 
     goos:
       - linux

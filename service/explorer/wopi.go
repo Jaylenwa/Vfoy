@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Jaylenwa/Vfoy/v3/middleware"
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/hashid"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/wopi"
+	"github.com/Jaylenwa/Vfoy/middleware"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem"
+	"github.com/Jaylenwa/Vfoy/pkg/hashid"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/wopi"
 	"github.com/gin-gonic/gin"
 )
 

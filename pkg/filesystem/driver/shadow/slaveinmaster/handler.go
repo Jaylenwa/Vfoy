@@ -8,14 +8,14 @@ import (
 	"net/url"
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cluster"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/response"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/mq"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/cluster"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/response"
+	"github.com/Jaylenwa/Vfoy/pkg/mq"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
 )
 
 // Driver 影子存储策略，将上传任务指派给从机节点处理，并等待从机通知上传结果

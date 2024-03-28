@@ -12,16 +12,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/chunk"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/chunk/backoff"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/mq"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/chunk"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/chunk/backoff"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
+	"github.com/Jaylenwa/Vfoy/pkg/mq"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 )
 
 const (

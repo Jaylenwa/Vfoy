@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/balancer"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/balancer"
 	"github.com/jinzhu/gorm"
 	"github.com/stretchr/testify/assert"
 )

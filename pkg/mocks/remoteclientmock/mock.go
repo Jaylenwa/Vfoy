@@ -3,8 +3,8 @@ package remoteclientmock
 import (
 	"context"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
 	"github.com/stretchr/testify/mock"
 )
 

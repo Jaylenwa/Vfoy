@@ -4,9 +4,9 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/wopi"
-	"github.com/Jaylenwa/Vfoy/v3/service/explorer"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/wopi"
+	"github.com/Jaylenwa/Vfoy/service/explorer"
 	"github.com/gin-gonic/gin"
 )
 

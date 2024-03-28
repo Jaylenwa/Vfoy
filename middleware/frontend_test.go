@@ -7,9 +7,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Jaylenwa/Vfoy/v3/bootstrap"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/bootstrap"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 	testMock "github.com/stretchr/testify/mock"

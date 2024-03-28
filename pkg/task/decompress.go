@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/json"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem"
 )
 
 // DecompressTask 文件压缩任务

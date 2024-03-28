@@ -4,12 +4,12 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/sessionstore"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/sessionstore"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 )

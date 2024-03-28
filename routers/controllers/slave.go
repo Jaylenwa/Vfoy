@@ -3,12 +3,12 @@ package controllers
 import (
 	"context"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/service/admin"
-	"github.com/Jaylenwa/Vfoy/v3/service/aria2"
-	"github.com/Jaylenwa/Vfoy/v3/service/explorer"
-	"github.com/Jaylenwa/Vfoy/v3/service/node"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/service/admin"
+	"github.com/Jaylenwa/Vfoy/service/aria2"
+	"github.com/Jaylenwa/Vfoy/service/explorer"
+	"github.com/Jaylenwa/Vfoy/service/node"
 	"github.com/gin-gonic/gin"
 )
 

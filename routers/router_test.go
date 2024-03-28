@@ -5,9 +5,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
+	model "github.com/Jaylenwa/Vfoy/models"
 	"github.com/jinzhu/gorm"
 	"github.com/stretchr/testify/assert"
 )

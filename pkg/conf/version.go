@@ -1,7 +1,7 @@
 package conf
 
 // BackendVersion 当前后端版本号
-var BackendVersion = "3.8.3"
+var BackendVersion = "1.0.0"
 
 // RequiredDBVersion 与当前版本匹配的数据库版本
 var RequiredDBVersion = "3.8.1"

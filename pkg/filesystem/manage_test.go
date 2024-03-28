@@ -8,15 +8,15 @@ import (
 
 	"github.com/DATA-DOG/go-sqlmock"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/response"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/response"
 	testMock "github.com/stretchr/testify/mock"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/jinzhu/gorm"
 	"github.com/stretchr/testify/assert"
 )

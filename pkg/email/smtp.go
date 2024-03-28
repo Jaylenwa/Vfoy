@@ -6,7 +6,7 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/go-mail/mail"
 )
 

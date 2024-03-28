@@ -1,9 +1,9 @@
 package model
 
 import (
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/gofrs/uuid"
 )
 

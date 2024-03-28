@@ -11,14 +11,14 @@ import (
 	"sync"
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/common"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/rpc"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/auth"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/common"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/rpc"
+	"github.com/Jaylenwa/Vfoy/pkg/auth"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 )
 
 type SlaveNode struct {

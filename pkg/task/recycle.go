@@ -3,9 +3,9 @@ package task
 import (
 	"encoding/json"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cluster"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/cluster"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 )
 
 // RecycleTask 文件回收任务

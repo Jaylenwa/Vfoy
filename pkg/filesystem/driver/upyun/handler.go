@@ -17,13 +17,13 @@ import (
 	"sync"
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/response"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/response"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/upyun/go-sdk/upyun"
 )
 

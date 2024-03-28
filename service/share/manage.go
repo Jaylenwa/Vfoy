@@ -4,9 +4,9 @@ import (
 	"net/url"
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/hashid"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/hashid"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
 	"github.com/gin-gonic/gin"
 )
 

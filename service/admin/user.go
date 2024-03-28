@@ -4,9 +4,9 @@ import (
 	"context"
 	"strings"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
 )
 
 // AddUserService 用户添加服务

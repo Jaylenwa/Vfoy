@@ -3,16 +3,16 @@ package controllers
 import (
 	"io"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cluster"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/mq"
+	"github.com/Jaylenwa/Vfoy/pkg/cluster"
+	"github.com/Jaylenwa/Vfoy/pkg/mq"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/email"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/wopi"
-	"github.com/Jaylenwa/Vfoy/v3/service/admin"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2"
+	"github.com/Jaylenwa/Vfoy/pkg/email"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/wopi"
+	"github.com/Jaylenwa/Vfoy/service/admin"
 	"github.com/gin-gonic/gin"
 )
 

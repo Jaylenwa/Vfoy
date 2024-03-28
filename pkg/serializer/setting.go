@@ -3,7 +3,7 @@ package serializer
 import (
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
+	model "github.com/Jaylenwa/Vfoy/models"
 )
 
 // SiteConfig 站点全局设置序列

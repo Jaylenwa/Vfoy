@@ -5,10 +5,10 @@ import (
 	"path"
 	"strings"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
-	"github.com/Jaylenwa/Vfoy/v3/service/share"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
+	"github.com/Jaylenwa/Vfoy/service/share"
 	"github.com/gin-gonic/gin"
 )
 

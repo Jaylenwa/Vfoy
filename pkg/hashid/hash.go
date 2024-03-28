@@ -3,7 +3,7 @@ package hashid
 import (
 	"errors"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
 	"github.com/speps/go-hashids"
 )
 

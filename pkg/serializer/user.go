@@ -5,8 +5,8 @@ import (
 
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/hashid"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/hashid"
 	"github.com/duo-labs/webauthn/webauthn"
 )
 

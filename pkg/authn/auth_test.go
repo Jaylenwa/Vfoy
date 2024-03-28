@@ -3,7 +3,7 @@ package authn
 import (
 	"testing"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
 	"github.com/stretchr/testify/assert"
 )
 

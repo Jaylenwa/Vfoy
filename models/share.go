@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/hashid"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/hashid"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
 )

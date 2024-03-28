@@ -9,13 +9,13 @@ import (
 
 	"runtime"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/response"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/thumb"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/response"
+	"github.com/Jaylenwa/Vfoy/pkg/thumb"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 )
 
 /* ================

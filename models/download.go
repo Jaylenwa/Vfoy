@@ -3,8 +3,8 @@ package model
 import (
 	"encoding/json"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/rpc"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/rpc"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/jinzhu/gorm"
 )
 

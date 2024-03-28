@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/thumb"
+	"github.com/Jaylenwa/Vfoy/pkg/thumb"
 	"github.com/stretchr/testify/mock"
 )
 

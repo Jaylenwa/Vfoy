@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
 	"github.com/jinzhu/gorm"
 	"github.com/stretchr/testify/assert"
 )

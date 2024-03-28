@@ -1,4 +1,4 @@
-module github.com/Jaylenwa/Vfoy/v3
+module github.com/Jaylenwa/Vfoy
 
 go 1.18
 

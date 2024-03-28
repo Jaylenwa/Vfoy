@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/common"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/rpc"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/common"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/rpc"
 )
 
 // Message 消息事件正文

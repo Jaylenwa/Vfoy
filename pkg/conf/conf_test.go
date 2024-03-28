@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/stretchr/testify/assert"
 )
 

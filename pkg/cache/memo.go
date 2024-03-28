@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 )
 
 // MemoStore 内存存储驱动

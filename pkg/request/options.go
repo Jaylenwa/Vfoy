@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/auth"
+	"github.com/Jaylenwa/Vfoy/pkg/auth"
 )
 
 // Option 发送请求的额外设置

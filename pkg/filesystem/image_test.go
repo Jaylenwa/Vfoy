@@ -5,12 +5,12 @@ import (
 	"errors"
 	"testing"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/response"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/mocks/thumbmock"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/thumb"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/response"
+	"github.com/Jaylenwa/Vfoy/pkg/mocks/thumbmock"
+	"github.com/Jaylenwa/Vfoy/pkg/thumb"
 	testMock "github.com/stretchr/testify/mock"
 
 	"github.com/stretchr/testify/assert"

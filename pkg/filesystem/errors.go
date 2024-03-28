@@ -3,7 +3,7 @@ package filesystem
 import (
 	"errors"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
 )
 
 var (

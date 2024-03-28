@@ -12,8 +12,8 @@ import (
 	"github.com/gofrs/uuid"
 	"github.com/samber/lo"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/jinzhu/gorm"
 )
 

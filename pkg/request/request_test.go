@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/auth"
+	"github.com/Jaylenwa/Vfoy/pkg/auth"
 	"github.com/stretchr/testify/assert"
 	testMock "github.com/stretchr/testify/mock"
 )

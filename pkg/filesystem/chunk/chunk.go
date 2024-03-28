@@ -6,10 +6,10 @@ import (
 	"io"
 	"os"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/chunk/backoff"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/chunk/backoff"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 )
 
 const bufferTempPattern = "cdChunk.*.tmp"

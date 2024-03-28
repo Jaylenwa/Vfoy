@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
+	model "github.com/Jaylenwa/Vfoy/models"
 	"github.com/stretchr/testify/assert"
 )
 

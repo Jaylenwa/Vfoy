@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/chunk/backoff"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/chunk/backoff"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -6,12 +6,12 @@ import (
 
 	"strings"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver/googledrive"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver/onedrive"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver/googledrive"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver/onedrive"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/gin-gonic/gin"
 	"github.com/samber/lo"
 )

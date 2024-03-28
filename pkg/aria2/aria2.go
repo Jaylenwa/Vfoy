@@ -7,13 +7,13 @@ import (
 	"sync"
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/common"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/monitor"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/rpc"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/balancer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cluster"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/mq"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/common"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/monitor"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/rpc"
+	"github.com/Jaylenwa/Vfoy/pkg/balancer"
+	"github.com/Jaylenwa/Vfoy/pkg/cluster"
+	"github.com/Jaylenwa/Vfoy/pkg/mq"
 )
 
 // Instance 默认使用的Aria2处理实例

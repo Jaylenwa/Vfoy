@@ -4,8 +4,8 @@ import (
 	"path"
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/rpc"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/rpc"
 )
 
 // DownloadListResponse 下载列表响应条目

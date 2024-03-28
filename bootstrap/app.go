@@ -4,26 +4,26 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/hashicorp/go-version"
 )
 
 // InitApplication 初始化应用常量
 func InitApplication() {
 	fmt.Print(`
-   ___ _                 _
-  / __\ | ___  _   _  __| |_ __ _____   _____
- / /  | |/ _ \| | | |/ _  | '__/ _ \ \ / / _ \
-/ /___| | (_) | |_| | (_| | | |  __/\ V /  __/
-\____/|_|\___/ \__,_|\__,_|_|  \___| \_/ \___|
+__     ____
+\ \   / / _| ___  _   _
+ \ \ / / |_ / _ \| | | |
+  \ V /|  _| (_) | |_| |
+   \_/ |_|  \___/ \__, |
+                  |___/
 
-   V` + conf.BackendVersion + `  Commit #` + conf.LastCommit + `  Pro=` + conf.IsPro + `
 ================================================
 
 `)
-	go CheckUpdate()
+	// go CheckUpdate()
 }
 
 type GitHubRelease struct {

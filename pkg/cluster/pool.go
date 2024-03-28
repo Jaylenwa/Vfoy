@@ -3,9 +3,9 @@ package cluster
 import (
 	"sync"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/balancer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/balancer"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 )
 
 var Default *NodePool

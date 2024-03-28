@@ -3,8 +3,8 @@ package email
 import (
 	"sync"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 )
 
 // Client 默认的邮件发送客户端

@@ -1,15 +1,15 @@
 package aria2
 
 import (
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/common"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/monitor"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cluster"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/mq"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/common"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/monitor"
+	"github.com/Jaylenwa/Vfoy/pkg/cluster"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem"
+	"github.com/Jaylenwa/Vfoy/pkg/mq"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/gin-gonic/gin"
 )
 

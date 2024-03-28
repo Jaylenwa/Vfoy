@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
+	model "github.com/Jaylenwa/Vfoy/models"
 	"github.com/jinzhu/gorm"
 	"github.com/stretchr/testify/assert"
 )

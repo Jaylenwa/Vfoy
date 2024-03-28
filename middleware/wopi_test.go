@@ -6,9 +6,9 @@ import (
 	"testing"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/mocks/wopimock"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/wopi"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/mocks/wopimock"
+	"github.com/Jaylenwa/Vfoy/pkg/wopi"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 )

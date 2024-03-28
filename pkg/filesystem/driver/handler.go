@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/response"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/response"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
 )
 
 var (

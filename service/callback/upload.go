@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"strings"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
+	model "github.com/Jaylenwa/Vfoy/models"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver/cos"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver/onedrive"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver/s3"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver/cos"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver/onedrive"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver/s3"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
 	"github.com/gin-gonic/gin"
 )
 

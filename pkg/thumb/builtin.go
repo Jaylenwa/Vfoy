@@ -11,8 +11,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 	"github.com/gofrs/uuid"
 
 	//"github.com/nfnt/resize"

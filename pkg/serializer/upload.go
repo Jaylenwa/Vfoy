@@ -4,7 +4,7 @@ import (
 	"encoding/gob"
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
+	model "github.com/Jaylenwa/Vfoy/models"
 )
 
 // UploadPolicy slave模式下传递的上传策略

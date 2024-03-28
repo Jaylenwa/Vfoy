@@ -3,8 +3,8 @@ package explorer
 import (
 	"context"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
 	"github.com/gin-gonic/gin"
 )
 

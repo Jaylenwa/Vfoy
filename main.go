@@ -13,12 +13,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Jaylenwa/Vfoy/v3/bootstrap"
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
-	"github.com/Jaylenwa/Vfoy/v3/routers"
+	"github.com/Jaylenwa/Vfoy/bootstrap"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
+	"github.com/Jaylenwa/Vfoy/routers"
 )
 
 var (

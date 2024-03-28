@@ -4,8 +4,8 @@ import (
 	"context"
 	"strconv"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 )
 
 type UpgradeTo340 int

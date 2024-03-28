@@ -1,7 +1,7 @@
 package sessionstore
 
 import (
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
 	"github.com/gin-contrib/sessions"
 )
 

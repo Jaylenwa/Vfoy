@@ -5,12 +5,12 @@ import (
 	"net/http"
 	"sync"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/fsctx"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/webdav"
-	"github.com/Jaylenwa/Vfoy/v3/service/setting"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/fsctx"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/webdav"
+	"github.com/Jaylenwa/Vfoy/service/setting"
 	"github.com/gin-gonic/gin"
 )
 

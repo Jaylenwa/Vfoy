@@ -12,12 +12,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/mocks/controllermock"
+	"github.com/Jaylenwa/Vfoy/pkg/mocks/controllermock"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
 	"github.com/jinzhu/gorm"
 	"github.com/stretchr/testify/assert"
 	testMock "github.com/stretchr/testify/mock"

@@ -4,11 +4,11 @@ import (
 	"path"
 	"strconv"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
+	model "github.com/Jaylenwa/Vfoy/models"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
-	"github.com/Jaylenwa/Vfoy/v3/service/callback"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
+	"github.com/Jaylenwa/Vfoy/service/callback"
 	"github.com/gin-gonic/gin"
 )
 

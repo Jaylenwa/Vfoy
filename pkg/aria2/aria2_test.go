@@ -4,13 +4,13 @@ import (
 	"database/sql"
 	"testing"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/mocks"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/mq"
+	"github.com/Jaylenwa/Vfoy/pkg/mocks"
+	"github.com/Jaylenwa/Vfoy/pkg/mq"
 	"github.com/stretchr/testify/assert"
 	testMock "github.com/stretchr/testify/mock"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	model "github.com/Jaylenwa/Vfoy/v3/models"
+	model "github.com/Jaylenwa/Vfoy/models"
 	"github.com/jinzhu/gorm"
 )
 

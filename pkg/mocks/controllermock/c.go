@@ -1,10 +1,10 @@
 package controllermock
 
 import (
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/common"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cluster"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/mq"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/common"
+	"github.com/Jaylenwa/Vfoy/pkg/cluster"
+	"github.com/Jaylenwa/Vfoy/pkg/mq"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
 	"github.com/stretchr/testify/mock"
 )
 

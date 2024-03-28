@@ -3,7 +3,7 @@ package requestmock
 import (
 	"io"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
 	"github.com/stretchr/testify/mock"
 )
 

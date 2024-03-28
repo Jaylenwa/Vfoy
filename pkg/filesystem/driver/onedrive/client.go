@@ -3,10 +3,10 @@ package onedrive
 import (
 	"errors"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cluster"
+	"github.com/Jaylenwa/Vfoy/pkg/cluster"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/request"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/request"
 )
 
 var (

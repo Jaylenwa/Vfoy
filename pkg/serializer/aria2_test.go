@@ -3,9 +3,9 @@ package serializer
 import (
 	"testing"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/rpc"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cache"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/rpc"
+	"github.com/Jaylenwa/Vfoy/pkg/cache"
 	"github.com/jinzhu/gorm"
 	"github.com/stretchr/testify/assert"
 )

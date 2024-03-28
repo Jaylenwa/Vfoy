@@ -3,8 +3,8 @@ package bootstrap
 import (
 	"context"
 
-	"github.com/Jaylenwa/Vfoy/v3/models/scripts/invoker"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/models/scripts/invoker"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 )
 
 func RunScript(name string) {

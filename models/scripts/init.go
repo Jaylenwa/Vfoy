@@ -1,6 +1,6 @@
 package scripts
 
-import "github.com/Jaylenwa/Vfoy/v3/models/scripts/invoker"
+import "github.com/Jaylenwa/Vfoy/models/scripts/invoker"
 
 func Init() {
 	invoker.Register("ResetAdminPassword", ResetAdminPassword(0))

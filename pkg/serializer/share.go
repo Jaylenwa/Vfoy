@@ -3,8 +3,8 @@ package serializer
 import (
 	"time"
 
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/hashid"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/hashid"
 )
 
 // Share 分享信息序列化

@@ -3,16 +3,16 @@ package filesystem
 import (
 	"net/http/httptest"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/cluster"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/conf"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver/shadow/masterinslave"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver/shadow/slaveinmaster"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/serializer"
+	"github.com/Jaylenwa/Vfoy/pkg/cluster"
+	"github.com/Jaylenwa/Vfoy/pkg/conf"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver/shadow/masterinslave"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver/shadow/slaveinmaster"
+	"github.com/Jaylenwa/Vfoy/pkg/serializer"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	model "github.com/Jaylenwa/Vfoy/v3/models"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver/local"
-	"github.com/Jaylenwa/Vfoy/v3/pkg/filesystem/driver/remote"
+	model "github.com/Jaylenwa/Vfoy/models"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver/local"
+	"github.com/Jaylenwa/Vfoy/pkg/filesystem/driver/remote"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 

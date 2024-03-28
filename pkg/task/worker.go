@@ -3,7 +3,7 @@ package task
 import (
 	"fmt"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/util"
+	"github.com/Jaylenwa/Vfoy/pkg/util"
 )
 
 // Worker 处理任务的对象

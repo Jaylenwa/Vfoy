@@ -3,9 +3,9 @@ package controllers
 import (
 	"context"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/aria2/common"
-	"github.com/Jaylenwa/Vfoy/v3/service/aria2"
-	"github.com/Jaylenwa/Vfoy/v3/service/explorer"
+	"github.com/Jaylenwa/Vfoy/pkg/aria2/common"
+	"github.com/Jaylenwa/Vfoy/service/aria2"
+	"github.com/Jaylenwa/Vfoy/service/explorer"
 	"github.com/gin-gonic/gin"
 )
 

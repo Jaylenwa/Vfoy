@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/Jaylenwa/Vfoy/v3/pkg/hashid"
+	"github.com/Jaylenwa/Vfoy/pkg/hashid"
 	"github.com/jinzhu/gorm"
 )
 
