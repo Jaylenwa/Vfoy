@@ -14,9 +14,6 @@ yarn build
 # 构建完成后删除映射文件
 cd build
 find . -name "*.map" -type f -delete
-# 返回项目主目录打包静态资源
-cd ../../
-zip -r - assets/build >assets.zip
 ```
 
 完成后，所构建的静态资源文件位于 assets/build 目录下。

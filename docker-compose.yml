@@ -17,7 +17,7 @@ services:
 
   vfoy:
     container_name: vfoy
-    image: jaylenwa/vofy:1.0.0
+    image: jaylenwa/vfoy:1.0.0
     restart: unless-stopped
     volumes:
       - ./vfoy/data:/data
