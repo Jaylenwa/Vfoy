@@ -4,7 +4,7 @@ module.exports = function (app) {
     ["/api","/custom","/f"].map(p=>app.use(
         p,
         proxy({
-            target: "http://localhost:5212",
+            target: "http://localhost:1214",
             changeOrigin: true,
         })
     ))

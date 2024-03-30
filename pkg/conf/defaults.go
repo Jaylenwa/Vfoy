@@ -21,7 +21,7 @@ var DatabaseConfig = &database{
 var SystemConfig = &system{
 	Debug:       false,
 	Mode:        "master",
-	Listen:      ":5212",
+	Listen:      ":1214",
 	ProxyHeader: "X-Forwarded-For",
 }
 

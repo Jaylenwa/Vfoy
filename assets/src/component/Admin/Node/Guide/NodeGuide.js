@@ -61,7 +61,7 @@ export default function NodeGuide(props) {
                   Status: 1,
                   Type: 0,
                   Aria2Enabled: "false",
-                  Server: "https://example.com:5212",
+                  Server: "https://example.com:1214",
                   SlaveKey: randomStr(64),
                   MasterKey: randomStr(64),
                   Rank: "0",

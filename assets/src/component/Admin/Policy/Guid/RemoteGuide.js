@@ -129,7 +129,7 @@ export default function RemoteGuide(props) {
             : {
                   Type: "remote",
                   Name: "",
-                  Server: "https://example.com:5212",
+                  Server: "https://example.com:1214",
                   SecretKey: randomStr(64),
                   DirNameRule: "uploads/{year}/{month}/{day}",
                   AutoRename: "true",
@@ -328,7 +328,7 @@ export default function RemoteGuide(props) {
                                 <br />
                                 Mode = slave
                                 <br />
-                                Listen = :5212
+                                Listen = :1214
                                 <br />
                                 <br />
                                 [Slave]

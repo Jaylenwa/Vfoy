@@ -187,7 +187,7 @@ export default function Communication(props) {
                         <br />
                         Mode = slave
                         <br />
-                        Listen = :5212
+                        Listen = :1214
                         <br />
                         <br />
                         [Slave]

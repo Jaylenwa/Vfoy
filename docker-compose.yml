@@ -14,10 +14,10 @@ services:
     environment:
       - RPC_SECRET=your_aria_rpc_token # aria rpc token, customize your own
       - RPC_PORT=6800
-      
+
   vfoy:
     container_name: vfoy
-    image: jaylenwa/vfoy:1.0
+    image: jaylenwa/vofy:1.0.0
     restart: unless-stopped
     volumes:
       - ./vfoy/data:/data
@@ -26,12 +26,5 @@ services:
     depends_on:
       - aria2
       - redis
-
-  vfoy-frontend:
-    container_name: vfoy-frontend
-    image: jaylenwa/vfoy-frontend:1.0
-    restart: unless-stopped
-    depends_on:
-      - vfoy
     ports:
-      - "80:80"
+      - 80:1214
