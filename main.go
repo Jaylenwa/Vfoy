@@ -27,7 +27,7 @@ var (
 	scriptName string
 )
 
-//go:embed assets.zip
+//go:embed vfoy-frontend.zip
 var staticZip string
 
 var staticFS fs.FS
@@ -46,7 +46,7 @@ func main() {
 	// 关闭数据库连接
 	defer func() {
 		if model.DB != nil {
-			model.DB.Close()
+			_ = model.DB.Close()
 		}
 	}()
 

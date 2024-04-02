@@ -50,7 +50,7 @@ func InitStatic(statics fs.FS) {
 		StaticFS = static.LocalFile(util.RelativePath("statics"), false)
 	} else {
 		// 初始化静态资源
-		embedFS, err := fs.Sub(statics, "assets/build")
+		embedFS, err := fs.Sub(statics, "build")
 		if err != nil {
 			util.Log().Panic("Failed to initialize static resources: %s", err)
 		}
@@ -97,7 +97,7 @@ func InitStatic(statics fs.FS) {
 // Eject 抽离内置静态资源
 func Eject(statics fs.FS) {
 	// 初始化静态资源
-	embedFS, err := fs.Sub(statics, "assets/build")
+	embedFS, err := fs.Sub(statics, "build")
 	if err != nil {
 		util.Log().Panic("Failed to initialize static resources: %s", err)
 	}

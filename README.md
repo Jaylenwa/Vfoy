@@ -18,4 +18,7 @@ find . -name "*.map" -type f -delete
 
 完成后，所构建的静态资源文件位于 assets/build 目录下。
 
-将build目录改名为statics 目录，放置在 主程序同级目录下并重启服务。
+静态资源有两种方式构建：
+
+1. 将build目录改名为statics 目录，放置在 主程序同级目录下并重启服务。
+2. 将build目录压缩为zip文件，文件名为vfoy-frontend.zip，放置在 主程序同级目录下并重启服务。
