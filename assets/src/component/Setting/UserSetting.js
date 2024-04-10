@@ -969,7 +969,7 @@ class UserSettingCompoment extends Component {
                             </ListItem>
                         </List>
                     </Paper>
-                    {user.group.webdav && (
+                    {/* {user.group.webdav && (
                         <div>
                             <Typography
                                 className={classes.sectionTitle}
@@ -1057,9 +1057,9 @@ class UserSettingCompoment extends Component {
                                 </List>
                             </Paper>
                         </div>
-                    )}
+                    )} */}
 
-                    <Typography
+                    {/* <Typography
                         className={classes.sectionTitle}
                         variant="subtitle2"
                     >
@@ -1109,7 +1109,7 @@ class UserSettingCompoment extends Component {
                                 </ListItemSecondaryAction>
                             </ListItem>
                         </List>
-                    </Paper>
+                    </Paper> */}
 
                     <div className={classes.paddingBottom} />
                 </div>
