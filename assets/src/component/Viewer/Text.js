@@ -133,6 +133,7 @@ export default function TextViewer() {
                         onSave={() => save()}
                         addImg={($file) => addImg($file)}
                         onChange={(value) => setContent(value)}
+                        preview = {true}
                         toolbar={{
                             h1: true, // h1
                             h2: true, // h2
