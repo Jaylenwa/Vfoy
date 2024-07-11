@@ -146,7 +146,7 @@ func (resp *Response) GetResponse() (string, error) {
 	if resp.Err != nil {
 		return "", resp.Err
 	}
-	respBody, err := ioutil.ReadAll(resp.Response.Body)
+	respBody, err := io.ReadAll(resp.Response.Body)
 	_ = resp.Response.Body.Close()
 
 	return string(respBody), err

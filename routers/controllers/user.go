@@ -62,6 +62,10 @@ func FinishLoginAuthn(c *gin.Context) {
 
 	var sessionData webauthn.SessionData
 	err = json.Unmarshal(sessionDataJSON, &sessionData)
+	if err != nil {
+		c.JSON(200, ErrorResponse(err))
+		return
+	}
 
 	instance, err := authn.NewAuthnInstance()
 	if err != nil {
@@ -118,6 +122,10 @@ func FinishRegAuthn(c *gin.Context) {
 
 	var sessionData webauthn.SessionData
 	err := json.Unmarshal(sessionDataJSON, &sessionData)
+	if err != nil {
+		c.JSON(200, ErrorResponse(err))
+		return
+	}
 
 	instance, err := authn.NewAuthnInstance()
 	if err != nil {

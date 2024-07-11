@@ -291,6 +291,20 @@ func (fs *FileSystem) List(ctx context.Context, dirPath string, pathProcessor fu
 	return fs.listObjects(ctx, parentPath, childFiles, childFolders, pathProcessor), nil
 }
 
+func (fs *FileSystem) ListFile(ctx context.Context, dirPath string, pathProcessor func(string) string) ([]model.File, error) {
+	// 获取父目录
+	isExist, folder := fs.IsPathExist(dirPath)
+	if !isExist {
+		return nil, ErrPathNotExist
+	}
+	fs.SetTargetDir(&[]model.Folder{*folder})
+
+	// 获取子文件
+	childFiles, _ := folder.GetChildFiles()
+
+	return childFiles, nil
+}
+
 // ListPhysical 列出存储策略中的外部目录
 // TODO:测试
 func (fs *FileSystem) ListPhysical(ctx context.Context, dirPath string) ([]serializer.Object, error) {

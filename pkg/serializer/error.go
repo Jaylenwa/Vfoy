@@ -217,6 +217,8 @@ const (
 	CodeParamErr = 40001
 	// CodeNotSet 未定错误，后续尝试从error中获取
 	CodeNotSet = -1
+	// CodeKnowledgeBaseErr 创建知识库失败
+	CodeKnowledgeBaseErr = 60001
 )
 
 // DBErr 数据库操作失败

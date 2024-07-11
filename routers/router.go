@@ -416,6 +416,13 @@ func InitMasterRouter() *gin.Engine {
 		auth := v3.Group("")
 		auth.Use(middleware.AuthRequired())
 		{
+			// 知识库
+			knowledge_base := auth.Group("knowledge_base")
+			{
+				// 创建知识库
+				knowledge_base.POST("", controllers.CreateKnowledgeBase)
+			}
+
 			// 管理
 			admin := auth.Group("admin", middleware.IsAdmin())
 			{
