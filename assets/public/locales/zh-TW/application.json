@@ -76,6 +76,7 @@
     "exceedQuota": "您的已用容量已超過容量配額，請盡快刪除多餘文件"
   },
   "fileManager": {
+    "generateKnowledgeBase": "生成知識庫",
     "open": "打開",
     "openParentFolder": "打開所在目錄",
     "download": "下載",

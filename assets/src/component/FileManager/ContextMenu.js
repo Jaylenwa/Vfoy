@@ -18,6 +18,7 @@ import MoveIcon from "@material-ui/icons/Input";
 import LinkIcon from "@material-ui/icons/InsertLink";
 import OpenIcon from "@material-ui/icons/OpenInNew";
 import ShareIcon from "@material-ui/icons/Share";
+import KnowledgeBase from "@material-ui/icons/LibraryBooks";
 import {
     FolderDownload,
     FolderUpload,
@@ -42,6 +43,7 @@ import {
     startDirectoryDownload,
     startDownload,
     toggleObjectInfoSidebar,
+    generateKnowledgeBase,
 } from "../../redux/explorer/action";
 import {
     changeContextMenu,
@@ -187,6 +189,9 @@ const mapDispatchToProps = (dispatch) => {
         openParentFolder: () => {
             dispatch(openParentFolder());
         },
+        generateKnowledgeBase: (path) => {
+            dispatch(generateKnowledgeBase(path));
+        },
     };
 };
 
@@ -221,6 +226,10 @@ class ContextMenuCompoment extends Component {
         this.props.navigateTo(
             pathJoin([this.props.path, this.props.selected[0].name])
         );
+    };
+
+    generateKnowledgeBase = () => {
+        this.props.generateKnowledgeBase(pathJoin([this.props.path, this.props.selected[0].name]))
     };
 
     // 暂时只对空白处右键菜单使用这个函数，疑似有bug会导致的一个菜单被默认选中。
@@ -434,6 +443,18 @@ class ContextMenuCompoment extends Component {
                                     )}
                                 </div>
                             )}
+                            {!this.props.isMultiple && this.props.withFolder && (
+                                <div>
+                                    <MenuItem dense onClick={this.generateKnowledgeBase}>
+                                        <StyledListItemIcon>
+                                            <KnowledgeBase />
+                                        </StyledListItemIcon>
+                                        <Typography variant="inherit">
+                                            {t("fileManager.generateKnowledgeBase")}
+                                        </Typography>
+                                    </MenuItem>
+                                </div>
+                            )}
                             {!this.props.isMultiple &&
                                 this.props.withFile &&
                                 (!this.props.share ||
@@ -515,18 +536,18 @@ class ContextMenuCompoment extends Component {
 
                             {(this.props.isMultiple ||
                                 this.props.withFolder) && (
-                                <MenuItem
-                                    dense
-                                    onClick={() => this.openArchiveDownload()}
-                                >
-                                    <StyledListItemIcon>
-                                        <DownloadIcon />
-                                    </StyledListItemIcon>
-                                    <Typography variant="inherit">
-                                        {t("fileManager.batchDownload")}
-                                    </Typography>
-                                </MenuItem>
-                            )}
+                                    <MenuItem
+                                        dense
+                                        onClick={() => this.openArchiveDownload()}
+                                    >
+                                        <StyledListItemIcon>
+                                            <DownloadIcon />
+                                        </StyledListItemIcon>
+                                        <Typography variant="inherit">
+                                            {t("fileManager.batchDownload")}
+                                        </Typography>
+                                    </MenuItem>
+                                )}
 
                             {isHomePage &&
                                 user.group.sourceBatch > 0 &&
@@ -542,14 +563,14 @@ class ContextMenuCompoment extends Component {
                                         </StyledListItemIcon>
                                         <Typography variant="inherit">
                                             {this.props.isMultiple ||
-                                            (this.props.withFolder &&
-                                                !this.props.withFile)
+                                                (this.props.withFolder &&
+                                                    !this.props.withFile)
                                                 ? t(
-                                                      "fileManager.getSourceLinkInBatch"
-                                                  )
+                                                    "fileManager.getSourceLinkInBatch"
+                                                )
                                                 : t(
-                                                      "fileManager.getSourceLink"
-                                                  )}
+                                                    "fileManager.getSourceLink"
+                                                )}
                                         </Typography>
                                     </MenuItem>
                                 )}

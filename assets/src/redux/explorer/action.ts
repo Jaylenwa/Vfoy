@@ -241,6 +241,12 @@ export const serverSideBatchDownload = (
     };
 };
 
+export const generateKnowledgeBase = async (path: string): Promise<any> => {
+    return await API.post("/knowledge_base", {
+        path: path,
+    });
+};
+
 export const startDownload = (
     share: any,
     file: VfoyFile
