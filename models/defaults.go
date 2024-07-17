@@ -134,6 +134,7 @@ Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; verti
 	{Name: "wopi_endpoint", Value: "", Type: "wopi"},
 	{Name: "wopi_max_size", Value: "52428800", Type: "wopi"},
 	{Name: "wopi_session_timeout", Value: "36000", Type: "wopi"},
+	{Name: "knowledge_base_url", Value: "http://localhost", Type: "ai"},
 }
 
 func InitSlaveDefaults() {

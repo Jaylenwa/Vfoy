@@ -13,20 +13,13 @@ import (
 	"path/filepath"
 	"strings"
 
+	model "github.com/Jaylenwa/Vfoy/models"
 	"github.com/Jaylenwa/Vfoy/pkg/filesystem"
 	"github.com/Jaylenwa/Vfoy/pkg/request"
 	"github.com/Jaylenwa/Vfoy/pkg/serializer"
 	"github.com/Jaylenwa/Vfoy/service/knowledge_base/entity"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-)
-
-const (
-	SPLITURL       = "http://192.168.254.130/api/dataset/document/split"
-	DOCSETURL      = "http://192.168.254.130/api/dataset"
-	TOKENURL       = "http://192.168.254.130/api/user/login"
-	APPLICATIONURL = "http://192.168.254.130/api/application"
-	MODELLISTURL   = "http://192.168.254.130/api/model"
 )
 
 type KnowledgeBase struct {
@@ -79,7 +72,7 @@ func (kb *KnowledgeBase) CreateKnowledgeBase(c *gin.Context) serializer.Response
 	u, _ := uuid.NewRandom()
 	docSet := entity.DocSetCreateReq{
 		Name: docSetName + u.String(),
-		Desc: docSetName + ":Vfoy文件夹生成的文档库",
+		Desc: "文件夹:" + docSetName + "生成的文档库",
 	}
 
 	documents := make([]entity.Document, 0)
@@ -114,7 +107,7 @@ func (kb *KnowledgeBase) CreateKnowledgeBase(c *gin.Context) serializer.Response
 
 	app := entity.ApplicationCreateReq{}.DocSetCreateRes2ApplicationCreateReq(docSetRes)
 
-	app.Desc = strings.Replace(kb.Path, "/", "_", -1) + ":Vfoy文件夹生成的应用"
+	app.Desc = "文件夹:" + strings.Replace(kb.Path, "/", "_", -1) + "生成的应用"
 
 	modelList, err := kb.GetModel()
 	if err != nil {
@@ -167,7 +160,9 @@ func (kb *KnowledgeBase) split(body *bytes.Buffer, w *multipart.Writer) (res *en
 		"Content-Type": w.FormDataContentType(),
 	}
 
-	resp, err := request.NewHttpClient().Post(context.Background(), SPLITURL, header, body)
+	url := model.GetSettingByName("knowledge_base_url") + "/api/dataset/document/split"
+
+	resp, err := request.NewHttpClient().Post(context.Background(), url, header, body)
 	if err != nil {
 		return
 	}
@@ -236,7 +231,9 @@ func (kb *KnowledgeBase) createDocSet(docSet entity.DocSetCreateReq) (res entity
 		"Authorization": token,
 	}
 
-	resp, err := request.NewHttpClient().Post(context.Background(), DOCSETURL, header, bytes.NewReader(docSetBytes))
+	url := model.GetSettingByName("knowledge_base_url") + "/api/dataset"
+
+	resp, err := request.NewHttpClient().Post(context.Background(), url, header, bytes.NewReader(docSetBytes))
 	if err != nil {
 		return
 	}
@@ -266,8 +263,11 @@ func (kb *KnowledgeBase) getToken() (token string, err error) {
 	header := map[string]string{
 		"Content-Type": "application/json",
 	}
+
+	url := model.GetSettingByName("knowledge_base_url") + "/api/user/login"
+
 	// 获取token
-	resp, err := request.NewHttpClient().Post(context.Background(), TOKENURL, header, bytes.NewReader(reqBody))
+	resp, err := request.NewHttpClient().Post(context.Background(), url, header, bytes.NewReader(reqBody))
 	if err != nil {
 		return
 	}
@@ -312,7 +312,9 @@ func (kb *KnowledgeBase) createApplication(req entity.ApplicationCreateReq) (err
 		return
 	}
 
-	resp, err := request.NewHttpClient().Post(context.Background(), APPLICATIONURL, header, bytes.NewReader(reqBytes))
+	url := model.GetSettingByName("knowledge_base_url") + "/api/application"
+
+	resp, err := request.NewHttpClient().Post(context.Background(), url, header, bytes.NewReader(reqBytes))
 	if err != nil {
 		return
 	}
@@ -350,7 +352,9 @@ func (kb *KnowledgeBase) GetModel() (res entity.ModelList, err error) {
 		"Authorization": token,
 	}
 
-	resp, err := request.NewHttpClient().Get(context.Background(), MODELLISTURL, header)
+	url := model.GetSettingByName("knowledge_base_url") + "/api/model"
+
+	resp, err := request.NewHttpClient().Get(context.Background(), url, header)
 	if err != nil {
 		return
 	}

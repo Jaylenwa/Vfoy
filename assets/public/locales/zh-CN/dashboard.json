@@ -14,6 +14,7 @@
     "50009": "跨域策略添加失败"
   },
   "nav": {
+    "knowledge_base": "知识库设置",
     "summary": "面板首页",
     "settings": "参数设置",
     "basicSetting": "站点信息",
@@ -86,6 +87,9 @@
     "themeColorDes": "CSS 色值，影响 PWA 启动画面上状态栏、内容页中状态栏、地址栏的颜色",
     "backgroundColor": "背景色",
     "backgroundColorDes": "CSS 色值",
+    "knowledgeBase": "基于大模型的知识库问答服务(AI问答)",
+    "knowledgeBaseUrl": "知识库服务地址",
+    "knowledgeBaseUrlDes": "maxkb服务器的服务地址(对指定的文件夹生成知识库，可通过AI进行知识库问答)",
     "hint": "提示",
     "webauthnNoHttps": "Web Authn 需要您的站点启用 HTTPS，并确认 参数设置 - 站点信息 - 站点URL 也使用了 HTTPS 后才能开启。",
     "accountManagement": "注册与登录",

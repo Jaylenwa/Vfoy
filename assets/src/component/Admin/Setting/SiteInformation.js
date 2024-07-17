@@ -48,6 +48,7 @@ export default function SiteInformation() {
         pwa_display: "",
         pwa_theme_color: "",
         pwa_background_color: "",
+        knowledge_base_url: "",
     });
 
     const handleChange = (name) => (event) => {
@@ -288,6 +289,27 @@ export default function SiteInformation() {
                                 />
                                 <FormHelperText id="component-helper-text">
                                     {t("backgroundColorDes")}
+                                </FormHelperText>
+                            </FormControl>
+                        </div>
+                    </div>
+                </div>
+                <div className={classes.root}>
+                    <Typography variant="h6" gutterBottom>
+                        {t("knowledgeBase")}
+                    </Typography>
+                    <div className={classes.formContainer}>
+                        <div className={classes.form}>
+                            <FormControl fullWidth>
+                                <InputLabel htmlFor="component-helper">
+                                    {t("knowledgeBaseUrl")}
+                                </InputLabel>
+                                <Input
+                                    value={options.knowledge_base_url}
+                                    onChange={handleChange("knowledge_base_url")}
+                                />
+                                <FormHelperText id="component-helper-text">
+                                    {t("knowledgeBaseUrlDes")}
                                 </FormHelperText>
                             </FormControl>
                         </div>

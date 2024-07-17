@@ -14,6 +14,7 @@
     "50009": "Failed to add CORS policy."
   },
   "nav": {
+    "knowledge_base": "KnowledgeBase",
     "summary": "Summary",
     "settings": "Settings",
     "basicSetting": "Basic",

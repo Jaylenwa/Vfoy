@@ -14,6 +14,7 @@
     "50009": "跨域策略新增失敗"
   },
   "nav": {
+    "knowledge_base": "知識庫設定",
     "summary": "面板首頁",
     "settings": "參數設定",
     "basicSetting": "站點訊息",
