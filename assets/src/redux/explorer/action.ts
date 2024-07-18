@@ -241,10 +241,27 @@ export const serverSideBatchDownload = (
     };
 };
 
-export const generateKnowledgeBase = async (path: string): Promise<any> => {
-    return await API.post("/knowledge_base", {
-        path: path,
-    });
+export const generateKnowledgeBase = (
+    path: string,
+): ThunkAction<any, any, any, any> => {
+    return async (dispatch): Promise<void> => {
+        dispatch(changeContextMenu("file", false));
+        dispatch(openLoadingDialog(i18next.t("fileManager.movingtoQ&A")));
+
+        try {
+            const response = await API.post("/knowledge_base", {
+                path: path,
+            });
+            // 在这里处理数据，例如：
+            const url = response.data.open_url;
+            window.open(url, '_blank');
+            // window.location.assign(url);
+            dispatch(closeAllModals());
+        } catch (e) {
+            dispatch(toggleSnackbar("top", "right", e.message, "warning"));
+            dispatch(closeAllModals());
+        }
+    };
 };
 
 export const startDownload = (

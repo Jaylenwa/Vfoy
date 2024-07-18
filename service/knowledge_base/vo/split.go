@@ -1,4 +1,4 @@
-package entity
+package vo
 
 // ContentItem 代表文件内容中的条目
 type ContentItem struct {

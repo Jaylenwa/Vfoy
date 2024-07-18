@@ -1,4 +1,4 @@
-package entity
+package vo
 
 type ModelList struct {
 	Code    int             `json:"code"`

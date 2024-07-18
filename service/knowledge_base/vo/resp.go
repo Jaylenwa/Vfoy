@@ -1,4 +1,4 @@
-package entity
+package vo
 
 type MaxKBResp struct {
 	Code    int    `json:"code"`

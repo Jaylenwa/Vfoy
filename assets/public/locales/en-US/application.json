@@ -76,7 +76,8 @@
     "exceedQuota": "Your used capacity has exceeded the quota, please delete the extra files."
   },
   "fileManager": {
-    "generateKnowledgeBase": "Generate knowledge base",
+    "movingtoQ&A": "Moving to Knowledge Base Q&A...",
+    "generateKnowledgeBase": "Generate knowledge base Q&A",
     "open": "Open",
     "openParentFolder": "Open parent folder",
     "download": "Download",

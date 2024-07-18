@@ -1,4 +1,4 @@
-package entity
+package vo
 
 const (
 	PROLOGUE = "您好，我是您的 知识库 小助手。\n- 什么是知识库问答？\n- 帮我写一份工作总结？\n- 给我写一篇邮件？"
@@ -34,6 +34,47 @@ type (
 
 	ModelSetting struct {
 		Prompt string `json:"prompt"`
+	}
+)
+
+type (
+	ApplicationList struct {
+		Code    int    `json:"code"`
+		Message string `json:"message"`
+		Data    []App  `json:"data"`
+	}
+
+	App struct {
+		ID                     string   `json:"id"`
+		Name                   string   `json:"name"`
+		Desc                   string   `json:"desc"`
+		ModelID                string   `json:"model_id"`
+		MultipleRoundsDialogue bool     `json:"multiple_rounds_dialogue"`
+		Prologue               string   `json:"prologue"`
+		ExampleList            []string `json:"example"`
+		UserID                 string   `json:"user_id"`
+		Status                 bool     `json:"status"`
+		CreateTime             string   `json:"create_time"`
+		UpdateTime             string   `json:"update_time"`
+		DatasetIDList          []string `json:"dataset_id_list"`
+	}
+)
+
+type (
+	ApplicationAccessToken struct {
+		Code    int         `json:"code"`
+		Message string      `json:"message"`
+		Data    AccessToken `json:"data"`
+	}
+
+	AccessToken struct {
+		ApplicationID string   `json:"application_id"`
+		AccessToken   string   `json:"access_token"`
+		IsActive      bool     `json:"is_active"`
+		AccessNum     int      `json:"access_num"`
+		WhiteActive   bool     `json:"white_active"`
+		WhiteList     []string `json:"white_list"`
+		ShowSource    bool     `json:"show_source"`
 	}
 )
 

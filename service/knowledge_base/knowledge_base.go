@@ -17,7 +17,7 @@ import (
 	"github.com/Jaylenwa/Vfoy/pkg/filesystem"
 	"github.com/Jaylenwa/Vfoy/pkg/request"
 	"github.com/Jaylenwa/Vfoy/pkg/serializer"
-	"github.com/Jaylenwa/Vfoy/service/knowledge_base/entity"
+	"github.com/Jaylenwa/Vfoy/service/knowledge_base/vo"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 )
@@ -27,6 +27,13 @@ type KnowledgeBase struct {
 }
 
 func (kb *KnowledgeBase) CreateKnowledgeBase(c *gin.Context) serializer.Response {
+
+	// 获取token
+	token, err := kb.getToken()
+	if err != nil {
+		return serializer.Err(serializer.CodeKnowledgeBaseErr, "Get token error", nil)
+	}
+
 	// 创建文件系统
 	fs, err := filesystem.NewFileSystemFromContext(c)
 	if err != nil {
@@ -63,33 +70,33 @@ func (kb *KnowledgeBase) CreateKnowledgeBase(c *gin.Context) serializer.Response
 	}
 
 	// 获取文档分片
-	split, err := kb.split(body, writer)
+	split, err := kb.split(token, body, writer)
 	if err != nil {
 		return serializer.Err(serializer.CodeKnowledgeBaseErr, "Error writing to multipart writer", err)
 	}
 
-	docSetName := strings.Replace(kb.Path, "/", "_", -1)
 	u, _ := uuid.NewRandom()
-	docSet := entity.DocSetCreateReq{
-		Name: docSetName + u.String(),
-		Desc: "文件夹:" + docSetName + "生成的文档库",
+	ustr := u.String()
+	docSet := vo.DocSetCreateReq{
+		Name: ustr,
+		Desc: ustr,
 	}
 
-	documents := make([]entity.Document, 0)
+	documents := make([]vo.Document, 0)
 
 	for _, data := range split.Data {
-		document := entity.Document{
+		document := vo.Document{
 			Name: data.Name,
 		}
 
-		paragraphs := make([]entity.Paragraph, 0)
+		paragraphs := make([]vo.Paragraph, 0)
 		for _, v := range data.Content {
-			paragraph := entity.Paragraph{
+			paragraph := vo.Paragraph{
 				Title:    v.Title,
 				Content:  v.Content,
 				IsActive: true,
 			}
-			paragraph.ProblemList = make([]entity.Problem, 0)
+			paragraph.ProblemList = make([]vo.Problem, 0)
 			paragraphs = append(paragraphs, paragraph)
 		}
 
@@ -100,16 +107,16 @@ func (kb *KnowledgeBase) CreateKnowledgeBase(c *gin.Context) serializer.Response
 	docSet.Documents = documents
 
 	// 创建知识库
-	docSetRes, err := kb.createDocSet(docSet)
+	docSetRes, err := kb.createDocSet(token, docSet)
 	if err != nil {
 		return serializer.Err(serializer.CodeKnowledgeBaseErr, "Failed to create knowledge base", err)
 	}
 
-	app := entity.ApplicationCreateReq{}.DocSetCreateRes2ApplicationCreateReq(docSetRes)
+	app := vo.ApplicationCreateReq{}.DocSetCreateRes2ApplicationCreateReq(docSetRes)
 
-	app.Desc = "文件夹:" + strings.Replace(kb.Path, "/", "_", -1) + "生成的应用"
+	app.Desc = ustr
 
-	modelList, err := kb.GetModel()
+	modelList, err := kb.GetModel(token)
 	if err != nil {
 		return serializer.Err(serializer.CodeKnowledgeBaseErr, "Failed to obtain model", err)
 	}
@@ -120,12 +127,96 @@ func (kb *KnowledgeBase) CreateKnowledgeBase(c *gin.Context) serializer.Response
 	app.ModelID = modelList.Data[0].ID
 
 	// 创建应用
-	err = kb.createApplication(app)
+	err = kb.createApplication(token, app)
 	if err != nil {
 		return serializer.Err(serializer.CodeKnowledgeBaseErr, "Create application failed", err)
 	}
 
-	return serializer.Response{}
+	// 获取应用信息
+	appInfo, err := kb.getApps(token, app.Name, app.Desc)
+	if err != nil {
+		return serializer.Err(serializer.CodeKnowledgeBaseErr, "Create application failed", err)
+	}
+
+	// 获取应用AccessToken信息
+	assessToken, err := kb.getAppAccessToken(token, appInfo.Data[0].ID)
+	if err != nil {
+		return serializer.Err(serializer.CodeKnowledgeBaseErr, "Create application failed", err)
+	}
+
+	return serializer.Response{Data: map[string]interface{}{
+		"open_url": model.GetSettingByName("knowledge_base_url") + "/ui/chat/" + assessToken.Data.AccessToken,
+	}}
+}
+
+func (kb *KnowledgeBase) getAppAccessToken(token string, applicationId string) (res vo.ApplicationAccessToken, err error) {
+
+	header := map[string]string{
+		"Content-Type":  "application/json",
+		"Authorization": token,
+	}
+
+	url := model.GetSettingByName("knowledge_base_url") + "/api/application"
+
+	url = fmt.Sprintf(url+"/%s/access_token", applicationId)
+
+	resp, err := request.NewHttpClient().Get(context.Background(), url, header)
+	if err != nil {
+		return
+	}
+
+	defer resp.Body.Close()
+
+	respBytes, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return
+	}
+
+	err = json.Unmarshal(respBytes, &res)
+	if err != nil {
+		return
+	}
+
+	if res.Code != 200 {
+		return res, errors.New(fmt.Sprintf("Error : %v", res.Message))
+	}
+
+	return
+}
+
+func (kb *KnowledgeBase) getApps(token string, name string, desc string) (res vo.ApplicationList, err error) {
+
+	header := map[string]string{
+		"Content-Type":  "application/json",
+		"Authorization": token,
+	}
+
+	url := model.GetSettingByName("knowledge_base_url") + "/api/application"
+
+	url = fmt.Sprintf(url+"?name=%s&desc=%s", name, desc)
+
+	resp, err := request.NewHttpClient().Get(context.Background(), url, header)
+	if err != nil {
+		return
+	}
+
+	defer resp.Body.Close()
+
+	respBytes, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return
+	}
+
+	err = json.Unmarshal(respBytes, &res)
+	if err != nil {
+		return
+	}
+
+	if res.Code != 200 {
+		return res, errors.New(fmt.Sprintf("Error : %v", res.Message))
+	}
+
+	return
 }
 
 func (kb *KnowledgeBase) fileCollection(dirPath string) (filePath []string, err error) {
@@ -154,10 +245,11 @@ func (kb *KnowledgeBase) fileCollection(dirPath string) (filePath []string, err 
 }
 
 // Split 文档分片
-func (kb *KnowledgeBase) split(body *bytes.Buffer, w *multipart.Writer) (res *entity.Split, err error) {
+func (kb *KnowledgeBase) split(token string, body *bytes.Buffer, w *multipart.Writer) (res *vo.Split, err error) {
 
 	header := map[string]string{
-		"Content-Type": w.FormDataContentType(),
+		"Content-Type":  w.FormDataContentType(),
+		"Authorization": token,
 	}
 
 	url := model.GetSettingByName("knowledge_base_url") + "/api/dataset/document/split"
@@ -213,13 +305,7 @@ func (kb *KnowledgeBase) docExtract(filesPath []string, body io.Writer) (writer 
 }
 
 // 创建知识库
-func (kb *KnowledgeBase) createDocSet(docSet entity.DocSetCreateReq) (res entity.DocSetCreateRes, err error) {
-
-	// 获取token
-	token, err := kb.getToken()
-	if err != nil {
-		return
-	}
+func (kb *KnowledgeBase) createDocSet(token string, docSet vo.DocSetCreateReq) (res vo.DocSetCreateRes, err error) {
 
 	docSetBytes, err := json.Marshal(docSet)
 	if err != nil {
@@ -252,7 +338,7 @@ func (kb *KnowledgeBase) createDocSet(docSet entity.DocSetCreateReq) (res entity
 	}
 
 	if res.Code != 200 {
-		return entity.DocSetCreateRes{}, errors.New(res.Message)
+		return vo.DocSetCreateRes{}, errors.New(res.Message)
 	}
 
 	return
@@ -279,7 +365,7 @@ func (kb *KnowledgeBase) getToken() (token string, err error) {
 		return
 	}
 
-	var maxKBResp entity.MaxKBResp
+	var maxKBResp vo.MaxKBResp
 
 	if err = json.Unmarshal(respBytes, &maxKBResp); err != nil {
 		return
@@ -295,12 +381,7 @@ func (kb *KnowledgeBase) getToken() (token string, err error) {
 	return
 }
 
-func (kb *KnowledgeBase) createApplication(req entity.ApplicationCreateReq) (err error) {
-
-	token, err := kb.getToken()
-	if err != nil {
-		return
-	}
+func (kb *KnowledgeBase) createApplication(token string, req vo.ApplicationCreateReq) (err error) {
 
 	header := map[string]string{
 		"Content-Type":  "application/json",
@@ -326,7 +407,7 @@ func (kb *KnowledgeBase) createApplication(req entity.ApplicationCreateReq) (err
 		return
 	}
 
-	var maxKBResp entity.ApplicationCreateRes
+	var maxKBResp vo.ApplicationCreateRes
 
 	err = json.Unmarshal(respBytes, &maxKBResp)
 	if err != nil {
@@ -341,11 +422,7 @@ func (kb *KnowledgeBase) createApplication(req entity.ApplicationCreateReq) (err
 }
 
 // GetModel 获取模型
-func (kb *KnowledgeBase) GetModel() (res entity.ModelList, err error) {
-	token, err := kb.getToken()
-	if err != nil {
-		return
-	}
+func (kb *KnowledgeBase) GetModel(token string) (res vo.ModelList, err error) {
 
 	header := map[string]string{
 		"Content-Type":  "application/json",
@@ -372,7 +449,7 @@ func (kb *KnowledgeBase) GetModel() (res entity.ModelList, err error) {
 	}
 
 	if res.Code != 200 {
-		return entity.ModelList{}, errors.New(fmt.Sprintf("Error : %v", res.Message))
+		return vo.ModelList{}, errors.New(fmt.Sprintf("Error : %v", res.Message))
 	}
 
 	return
