@@ -445,20 +445,6 @@ class ContextMenuCompoment extends Component {
                             )}
                             {!this.props.isMultiple && this.props.withFolder && (
                                 <div>
-                                    <MenuItem
-                                        dense
-                                        onClick={() =>
-                                            this.props.openRenameDialog()
-                                        }
-                                    >
-                                        <StyledListItemIcon>
-                                            <RenameIcon />
-                                        </StyledListItemIcon>
-                                        <Typography variant="inherit">
-                                            {t("fileManager.rename")}
-                                        </Typography>
-                                    </MenuItem>
-                                    
                                     <MenuItem dense onClick={this.generateKnowledgeBase}>
                                         <StyledListItemIcon>
                                             <KnowledgeBase />
