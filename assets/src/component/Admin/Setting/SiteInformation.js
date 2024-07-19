@@ -49,6 +49,8 @@ export default function SiteInformation() {
         pwa_theme_color: "",
         pwa_background_color: "",
         knowledge_base_url: "",
+        kb_username: "",
+        kb_pwd: "",
     });
 
     const handleChange = (name) => (event) => {
@@ -301,6 +303,35 @@ export default function SiteInformation() {
                     <div className={classes.formContainer}>
                         <div className={classes.form}>
                             <FormControl fullWidth>
+                                <InputLabel htmlFor="component-helper">
+                                    {t("kbUserName")}
+                                </InputLabel>
+                                <Input
+                                    value={options.kb_username}
+                                    onChange={handleChange("kb_username")}
+                                />
+                                <FormHelperText id="component-helper-text">
+                                    {t("kbUserNameDes")}
+                                </FormHelperText>
+                            </FormControl>
+                        </div>
+                        <div className={classes.form}>
+                            <FormControl fullWidth>
+                                <InputLabel htmlFor="component-helper">
+                                    {t("kbPwd")}
+                                </InputLabel>
+                                <Input
+                                    value={options.kb_pwd}
+                                    onChange={handleChange("kb_pwd")}
+                                />
+                                <FormHelperText id="component-helper-text">
+                                    {t("kbPwdDes")}
+                                </FormHelperText>
+                            </FormControl>
+                        </div>
+                        <div className={classes.form}>
+                            <FormControl fullWidth>
+
                                 <InputLabel htmlFor="component-helper">
                                     {t("knowledgeBaseUrl")}
                                 </InputLabel>

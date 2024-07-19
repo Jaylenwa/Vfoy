@@ -345,9 +345,21 @@ func (kb *KnowledgeBase) createDocSet(token string, docSet vo.DocSetCreateReq) (
 }
 
 func (kb *KnowledgeBase) getToken() (token string, err error) {
-	reqBody := []byte(`{"username":"admin","password":"wang1318248167@"}`)
 	header := map[string]string{
 		"Content-Type": "application/json",
+	}
+
+	username := model.GetSettingByName("kb_user")
+
+	pwd := model.GetSettingByName("kb_pwd")
+
+	reqBody, err := json.Marshal(map[string]string{
+		"username": username,
+		"password": pwd,
+	})
+	
+	if err != nil {
+		return
 	}
 
 	url := model.GetSettingByName("knowledge_base_url") + "/api/user/login"

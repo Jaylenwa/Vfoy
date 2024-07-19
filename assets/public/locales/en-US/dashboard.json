@@ -61,6 +61,13 @@
     "newsTag": "announcements"
   },
   "settings": {
+    "knowledgeBase": "Knowledge Base Q&A Service based on Large Models (AI Q&A)",
+    "knowledgeBaseUrl": "Knowledge Base Service URL",
+    "knowledgeBaseUrlDes": "The service address of the maxkb server (generates a knowledge base for a specified folder, allowing for AI-based knowledge base Q&A)",
+    "kbUserName": "maxkb account",
+    "kbUserNameDes": "maxkb login account",
+    "kbPwd": "maxkb password",
+    "kbPwdDes": "maxkb login password",
     "saved": "Settings saved.",
     "save": "Save",
     "basicInformation": "Basic Information",

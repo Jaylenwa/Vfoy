@@ -61,6 +61,13 @@
     "newsTag": "notice"
   },
   "settings": {
+    "knowledgeBase": "基於大模型的知識庫問答服務 (AI 問答)",
+    "knowledgeBaseUrl": "知識庫服務位址",
+    "knowledgeBaseUrlDes": "maxkb 伺服器的服務位址 (對指定的資料夾生成知識庫，可透過 AI 進行知識庫問答)",
+    "kbUserName": "maxkb 帳號",
+    "kbUserNameDes": "maxkb 登入帳號",
+    "kbPwd": "maxkb 密碼",
+    "kbPwdDes": "maxkb 登入密碼",
     "saved": "設定已更改",
     "save": "儲存",
     "basicInformation": "基本訊息",
